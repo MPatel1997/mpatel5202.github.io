@@ -11,7 +11,7 @@
 </style>
 
 <body class="w3-light-grey">
-	<!-- This page will give some examples on how JavaScript can be used. I have  few problems and solutions on using JavaScript -->
+	<!-- This page includes my graphics demonstration on using HTML5 Canvas, SVG, audio, and voice. -->
 	<div class="w3-content w3-margin-top" style="max-width:1400px;">
 		<!-- The Grid -->
 		<div class="w3-row-padding">
@@ -73,7 +73,7 @@
 						<p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>User Guide</b>
 						</p>
 						<p><a href="websiteuse.html" target="_blank">Website Accessibility &amp; Usability </a>
-							<p><a href="jsapplication.html" target="_blank">JavaScript Application Demo</a>
+							<p><a href="jsapplication.html" target="_blank">Javascript Application Demo</a>
 								<p><a href="graphicsproject.html" target="_blank">Graphics Project</a>
 								</p>
 								<p><a href="files/fieldreport.docx" target="_blank">Field Report</a>
@@ -94,83 +94,38 @@
 					<div class="w3-container">
 						<h2>Graphic Projects:</h2>
 						<div class="content">
-							<h2> ------------ Exercise 1 -------------- </h2>
-							<h3>Print Hello World!</h3>
-							<br>
-							<h4>Problem Statement</h4>
-							<p>Write a program that says Hello World!</p>
-							<h4>Plans and Pseudocode</h4>
-							<p>User will be asked to click the button.</p>
-							<p>When button is clicked, the words Hello World! will come up.</p>
-								<br>
-								<h4>Solution</h4>
-								<code>function helloWorld() {
-										document.getElementById("hello").innerHTML = "Hello World!";</code>
-								<br>
-								<h4>Demonstration</h4>
-								<script>
-									function helloWorld() {
-									    document.getElementById("hello").innerHTML = "Hello World!";
-										}
-								</script>
-								<button onclick="helloWorld()">Try it</button>
-								<p id="hello"></p>
-								<h2> ------------ Exercise 2 -------------- </h2>
-								<h3>Adding two variables together by using the addition operator:</h3>
-								<br>
-								<h4>Problem Statement</h4>
-								<p>Add two different numbers together to find the total.</p>
-								<h4>Plans and Pseudocode</h4>
-								<p>Create two variables to get the total.</p>
-								<p>Variable x will be equal to 5.</p>
-								<p> Variable y will be equal to 7.</p>
-								<p>By using the addition operator for variable z, the total between variable x and variable y will be 12."</p>
-									<br>
-									<h4>Solution</h4>
-									<code>var x = 5;
-										  var y = 7;
-	                                      var z = x + y;
-										  document.getElementById("total").innerHTML = z;</code>
-									<br>
-									<h4>Demonstration</h4> 
-									<p id="total"></p>
-									<script>
-										var x = 5;
-										var y = 7;
-										var z = x + y;
-										document.getElementById("total").innerHTML = z;
-									</script>
-									<h2> ------------ Exercise 3 -------------- </h2>
-									<h3>Loop through a block of code ten times.</h3>
-									<br>
-									<h4>Problem Statement</h4>
-									<p>Click the button to loop through a block of code ten times.</p>
-									<h4>Plans and Pseudocode</h4>
-									<p>Start with the number zero.</p>
-									<p>As the code is being incremented, add one to the previous number to get the next number.</p>
-									<p>This code will repeat the previous instructions.</p>
-										<br>
-										<h4>Solution</h4>
-										<code>function myFunction() {
-											  var x = "", i;
-											  for (i=0; i<10; i++) {
-											  x = x + "The number is " + i + "<br>";
-											  }
-											  document.getElementById("new").innerHTML = x;
-											  }</code>
-										<br>
-										<h4>Demonstration</h4>
-										<button onclick="myFunction()">Try it</button>
-										<p id="new"></p>
-										<script>
-											function myFunction() {
-											    var x = "", i;
-											    for (i=0; i<10; i++) {
-											        x = x + "The number is " + i + "<br>";
-											    }
-											    document.getElementById("new").innerHTML = x;
-												}
-										</script>
+						<!-- This is how to code HTML5 Canvas. -->
+							<h3>HTML5 Canvas:</h3>&nbsp;&nbsp;
+							<canvas id="myCanvas" width="200" height="100" style="border:10px solid #c05c33;"></canvas>
+							<script>
+								var c = document.getElementById("myCanvas");
+								var ctx = c.getContext("2d");
+								ctx.font = "40px Times New Roman";
+								ctx.fillStyle = 'blue';
+								ctx.fillText("Welcome",20,60);
+							</script>
+							</script>
+							<!-- This is how to code SVG. -->
+							<h3>HTML5 SVG:</h3>&nbsp;&nbsp;
+							<svg width="200" height="200">
+								<polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:white;stroke:blue;stroke-width:5;fill-rule:evenodd;" />
+								<text fill="black" font-size="25" font-family="Arial" x="75" y="125">SVG</text>
+							</svg>
+							<!-- This is how to code an HTML5 audio. -->
+							<h3>HTML5 Audio:</h3>&nbsp;&nbsp;
+							<audio controls>
+								<source src="files/meowbeep.mp3" type="audio/mpeg">
+							</audio>
+							<!-- This is how to code an HTML5 video. -->
+							<h3>HTML5 Video:</h3>&nbsp;&nbsp;
+							<video width="400" height="300" controls>
+								<source src="files/countdown.mp4" type="video/mp4">
+							</video>
+							<!-- Here is the hyper-link for my fields report. -->
+							<h3>Fields Report:</h3>&nbsp;&nbsp;
+							<a href="files/fieldreport.docx">
+								<img src="files/click.jpg">
+							</a>
 						</div>
 					</div>
 					<!-- End Right Column -->
